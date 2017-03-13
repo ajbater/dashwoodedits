@@ -46,6 +46,7 @@ var $gallery = $('.gallery').isotope({
 });
 
 $('.filter-category-group').on('click', '.category', function() {
+	$(this).toggleClass('selected').siblings().removeClass('selected');
 	var filterValue = $(this).attr('data-filter');
 	$gallery.isotope({ filter: filterValue });
 });
