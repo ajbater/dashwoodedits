@@ -45,7 +45,7 @@ var $gallery = $('.gallery').isotope({
 	layoutMode: 'fitRows'
 });
 
-$('.filter-button-group').on('click', 'button', function() {
+$('.filter-category-group').on('click', '.category', function() {
 	var filterValue = $(this).attr('data-filter');
 	$gallery.isotope({ filter: filterValue });
 });
