@@ -18,7 +18,7 @@ VENOBOX
 $(document).ready(function(){
 
     /* default settings */
-    $('.venobox').venobox(); 
+    $('.venobox').venobox();
 
 
     /* custom settings */
@@ -36,3 +36,16 @@ $(document).ready(function(){
     $("#firstlink").venobox().trigger('click');
 });
 
+/******************************
+ISOTOPE
+******************************/
+
+var $gallery = $('.gallery').isotope({
+	itemSelector: '.image-container',
+	layoutMode: 'fitRows'
+});
+
+$('.filter-button-group').on('click', 'button', function() {
+	var filterValue = $(this).attr('data-filter');
+	$gallery.isotope({ filter: filterValue });
+});
